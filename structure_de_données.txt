@@ -1,1 +1,22 @@
 
+2 pages -> questionnaire + résultats
+
+
+récupère de la page questionnaire :
+1 personne = 1 dico avec : nom, age, couleur, plat, sport, activités, musique, matière +, 
+matière -
+
+compare aux autres données personne -> si 2, 3, etc... réponses en commun alors n nombre de
+points attribué
+
+sur la deuxième page :
+- tableau décroissant avec nom des personnes qui le plus grand nombre de points entre les 
+    listes comparées
+- Affichage de la carte avec les points convertis en distance pour afficher les personnes 
+    + ou - loin
+
+
+1 liste élèves
+1 élève : 1 dico avec des caractéristiques tel que nom, age, couleur, plat, sport, activités, musique, matière +, 
+matière -
+1 liste pour chaque couleur, plat, sport, activités
