@@ -10,7 +10,6 @@ eleves = {
             "couleur" : "violet",
             "plat" : "tacos",
             "matière préférée" : "NSI"
-
         },
         "loisirs" : {
             "sport" : "hockey",
@@ -22,8 +21,8 @@ eleves = {
 }
 
 # exemple dico vide
-eleves = {
-    "élève 1" : {
+eleves_vide = [
+    eleve1 = {
         "info perso" : {
             "nom" : "",
             "age" : "",
@@ -33,7 +32,6 @@ eleves = {
             "couleur" : "",
             "plat" : "",
             "matière préférée" : ""
-
         },
         "loisirs" : {
             "sport" : "",
@@ -41,5 +39,25 @@ eleves = {
             "jeux vidéo" : "",
             "lecture" : ""
         }
-    }   
-}
+    },
+
+    eleve1 = {
+    "info perso" : {
+            "nom" : "",
+            "age" : "",
+            "genre" : ""
+        },
+        "préférences" : {
+            "couleur" : "",
+            "plat" : "",
+            "matière préférée" : ""
+        },
+        "loisirs" : {
+            "sport" : "",
+            "musique " : "",
+            "jeux vidéo" : "",
+            "lecture" : ""
+        }
+    }      
+]
+
