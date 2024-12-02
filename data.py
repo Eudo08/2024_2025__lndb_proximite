@@ -40,7 +40,6 @@ eleves_vide = [
             "lecture" : ""
         }
     },
-
     eleve1 = {
     "info perso" : {
             "nom" : "",
