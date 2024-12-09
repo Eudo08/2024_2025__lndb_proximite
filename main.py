@@ -34,33 +34,29 @@ dico = {
     }
 }
 
-def compare_with_all_person ():
-    for person in dico.keys():
-        for people in dico.keys() :
-            cptr = 0
-            if dico [people]["info_perso"] == dico[person]["info_perso"]:
-                print (f"{dico[person]['presentation']['prenom']} est à 100% compatible avec elle-même.")
-            else:
-                for caracter in dico[people]["info_perso"].keys ():
-                    if dico [person]['info_perso'][caracter] == dico [people]['info_perso'][caracter]:
-                        cptr = cptr + 1
-                percentage_of_same = round (cptr /len(dico[person]['info_perso']) * 100)
-                print (f"{dico[person]['presentation']['prenom']} a une poucentage de compatibilité avec {dico[people]['presentation']['prenom']} de {percentage_of_same}%.")
+dico_compatibilite = {}
 
-# compare_with_all_person ()
+def calcul_compatibilite (cptr,person):
+    return round (cptr /len(dico[person]['info_perso']) * 100)
+
+
+def compare_with_one_person (people,person):
+    cptr = 0
+    if dico [people]["info_perso"] == dico[person]["info_perso"]:
+        pass
+    else:
+        for caracter in dico[people]["info_perso"].keys ():
+            if dico [person]['info_perso'][caracter] == dico [people]['info_perso'][caracter]:
+                cptr = cptr + 1
+    return (cptr)
 
 
 def compare_with_different_person (person):
+    dico_compatibilite [person] = {}
     for people in dico.keys() :
-        cptr = 0
-        if dico [people]["info_perso"] == dico[person]["info_perso"]:
-            pass
-        else:
-            for caracter in dico[people]["info_perso"].keys ():
-                if dico [person]['info_perso'][caracter] == dico [people]['info_perso'][caracter]:
-                    cptr = cptr + 1
-            percentage_of_same = round (cptr /len(dico[person]['info_perso']) * 100)
-            return (percentage_of_same)
+        cptr = compare_with_one_person (people,person)
+        percentage_of_same = calcul_compatibilite (cptr, person)
+        dico_compatibilite [person][people] = percentage_of_same
+    return dico_compatibilite
 
-compare_with_different_person ("person_1")
-
+print (compare_with_different_person ("person_1"))
