@@ -59,4 +59,68 @@ def compare_with_different_person (person):
         dico_compatibilite [person][people] = percentage_of_same
     return dico_compatibilite
 
+<<<<<<< HEAD
 print (compare_with_different_person ("person_1"))
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+from flask import Flask, jsonify 
+
+app = Flask(__name__) 
+
+@app.route('/api', methods=['GET']) 
+def home(): 
+    return jsonify({'message': 'Bonjour le monde !'}) 
+
+if __name__ == '__main__': 
+    app.run(debug=True)
+>>>>>>> 76445b76d48994f9c178ccaa755ed48d02ed572c
