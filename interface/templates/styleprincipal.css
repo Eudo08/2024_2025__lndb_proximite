@@ -1,0 +1,16 @@
+h1 {
+    color : rgb(123, 229, 243)
+}
+
+
+
+
+.principal {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(243, 207, 237);
+    height: 100%;
+    padding: 2em;
+    min-height: 1000px;
+}
