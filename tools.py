@@ -1,10 +1,29 @@
-from flask import Flask, jsonify 
+from interface import *
+from data import *
+from flask import Flask, request
 
-app = Flask(__name__) 
+site = Flask(__name__)
 
-@app.route('/api', methods=['GET']) 
-def home(): 
-    return jsonify({'message': 'Bonjour le monde !'}) 
+@site.route('/submit', methods=['POST'])
 
-if __name__ == '__main__': 
-    app.run(debug=True)
+def handle_form():
+    # Récupérer les données du formulaire
+    name = request.form.get('name')
+    email = request.form.get('email')
+    phone = request.form.get('phone')
+
+    # Insérer les données dans un dictionnaire
+    client_data = {
+        "name": name,
+        "email": email,
+        "phone": phone
+    }
+
+    # Afficher le dictionnaire pour vérification
+    print(client_data)
+
+    return f"Données reçues : {client_data}"
+
+if __name__ == '__main__':
+    # Lancer le serveur Flask
+    site.run(debug=True) 
