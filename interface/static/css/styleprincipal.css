@@ -17,6 +17,16 @@ h1 {
     
 }
 
+.principal {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(175, 184, 238);;
+    height: 100%;
+    padding: 2em;
+    min-height: 1000px;
+}
+
 .entry {
 
     font-family: sans-serif;
@@ -36,21 +46,33 @@ h1 {
     margin-left: 30px; /* Centre l'input horizontalement */
     margin-right: auto;
     margin-top: auto;
-    padding: 5px; /* Ajoute de l'espace à l'intérieur */
+    padding: 6px; /* Ajoute de l'espace à l'intérieur */
     width: 150px; /* Largeur de l'input */
     font-size: 11px; /* Taille du texte */
     border: 2px solid #322c86; /* Bordure noire */
     border-radius: 5px; /* Coins arrondis */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Effet d'ombre léger */
+    color:#322c86;
 }
 
+.input-menu {
+    display: block; /* Met le menu sur une nouvelle ligne */
+    margin-left: 30px; /* Décalage à gauche */
+    margin-right: auto; /* Centre horizontalement */
+    margin-top: auto; /* Espace avec le texte */
+    padding: 5px; /* Espacement interne */
+    width: 200; /* Largeur du menu */
+    font-size: 11px; /* Taille du texte */
+    border: 2px solid #322c86; /* Bordure */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Effet d'ombre léger */
+    background-color: #fff; /* Fond blanc */
+    color: #322c86; /* Couleur du texte */
+    cursor: pointer; /* Curseur pointer */
+    
+}
 
-.principal {
-    width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: rgb(175, 184, 238);;
-    height: 100%;
-    padding: 2em;
-    min-height: 1000px;
+.input-nom option:hover {
+    background-color: #7690b8;
+    color: #322c86; 
 }
