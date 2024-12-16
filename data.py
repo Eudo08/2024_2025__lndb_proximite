@@ -65,7 +65,7 @@ dico = {
     "person_1": {
         "presentation" : {
         "prenom" : "Eudocie",
-        "nom" : "De Khovrine"
+        "nom" : "de Khovrine"
         },
         "info_perso" : {
         "interet" : "manger",
