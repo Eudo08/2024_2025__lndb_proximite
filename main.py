@@ -19,9 +19,15 @@ def compare_with_one_person (people,person):
 def compare_with_different_person (person):
     dico_compatibilite [person] = {}
     for people in dico.keys() :
-        cptr = compare_with_one_person (people,person)
-        percentage_of_same = calcul_compatibilite (cptr, person)
-        dico_compatibilite [person][people] = percentage_of_same
+        if dico [people]["info_perso"] == dico[person]["info_perso"]:
+            pass
+        else:
+            cptr = compare_with_one_person (people,person)
+            percentage_of_same = calcul_compatibilite (cptr, person)
+            dico_compatibilite [person][people] = percentage_of_same
     return dico_compatibilite
 
-print (compare_with_different_person ("person_1"))
+print (compare_with_different_person ("person_3"))
+
+def tri_compatibility_between_users (person):
+    pass
