@@ -20,15 +20,28 @@ h1 {
 .entry {
 
     font-family: sans-serif;
-    color: #1d70bd;
+    color: #322c86;
     font-weight: bold;
     margin: 0;  
     line-height: 1.3em;
-    font-size: 16px;
+    font-size: 15px;
     margin-top: 20px;
-    margin-left: auto;
-    
+    margin-left: 30px;
+    margin-bottom: 10px;
 
+}
+
+.input-entry {
+    display: block; /* Met l'input sur une nouvelle ligne */
+    margin-left: 30px; /* Centre l'input horizontalement */
+    margin-right: auto;
+    margin-top: auto;
+    padding: 5px; /* Ajoute de l'espace à l'intérieur */
+    width: 150px; /* Largeur de l'input */
+    font-size: 11px; /* Taille du texte */
+    border: 2px solid #322c86; /* Bordure noire */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Effet d'ombre léger */
 }
 
 
