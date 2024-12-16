@@ -1,25 +1,36 @@
 h1 {
-
     text-transform: uppercase;
     color: #0000;
     font-family: sans-serif;
-    font-size: 100px;
+    font-size: 70px;
     font-weight: bold;
     background:
-        repeating-radial-gradient(#000 0 0.0001%, #fff 0 0.0002%) 50% 0/2500px 2500px,
-        repeating-conic-gradient(#000 0 0.0001%, #fff 0 0.0002%) 50% 50%/2500px 2500px;
+        repeating-radial-gradient(#000 0 0.0001%, #ffffff 0 0.0002%) 50% 0/2500px 2500px,
+        repeating-conic-gradient(#000 0 0.0001%, #ffffff 0 0.0002%) 50% 50%/2500px 2500px;
     background-blend-mode: difference;
     mix-blend-mode: lighten;
     -webkit-background-clip: text;
     background-clip: text;
+    margin: 0; 
+    padding: 20px 0;
+    text-align: center;
+    
 }
 
-
 .entry {
+
     font-family: sans-serif;
     color: #1d70bd;
     font-weight: bold;
+    margin: 0;  
+    line-height: 1.3em;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: auto;
+    
+
 }
+
 
 .principal {
     width: 700px;
