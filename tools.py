@@ -6,8 +6,8 @@ site = Flask(__name__)
 
 @site.route('/submit', methods=['POST'])
 
-def handle_form():
-    # Récupérer les données du formulaire
+def save_info():
+    
     name = request.form.get('name')
     email = request.form.get('email')
     phone = request.form.get('phone')
