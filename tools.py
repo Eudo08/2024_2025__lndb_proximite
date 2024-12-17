@@ -6,23 +6,19 @@ site = Flask(__name__)
 
 @site.route('/submit', methods=['POST'])
 
-def handle_form():
-    # Récupérer les données du formulaire
-    name = request.form.get('name')
-    email = request.form.get('email')
-    phone = request.form.get('phone')
+def save_info():
+    
+    prenom = request.form.get('prenom')
+    nom = request.form.get('nom')
+    genre = request.form.get('genre')
 
-    # Insérer les données dans un dictionnaire
-    client_data = {
+    personne1 = {
         "name": name,
         "email": email,
         "phone": phone
     }
 
-    # Afficher le dictionnaire pour vérification
-    print(client_data)
-
-    return f"Données reçues : {client_data}"
+    return personne1
 
 if __name__ == '__main__':
     # Lancer le serveur Flask
