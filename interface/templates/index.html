@@ -13,83 +13,90 @@
 </head>
 
 <body>
-    <div id="main" class="principal">
-        <center>
-            <h1>
-                Trouvez votre mate
-            </h1>
-        </center>
-        <p class="entry">Entrez votre prénom :</p>
-        <input type="text" class="input-entry" placeholder="Votre prénom ici">
-        <br>
-        <p class="entry">Entrez votre nom :</p>
-        <input type="text" class="input-entry" placeholder="Votre nom ici">
-        <br>
-        <p class="entry">Entrez votre genre :</p>
-        <select class="input-menu">
-            <option value="fille">fille</option>
-            <option value="garçon">garçon</option>
-            <option value="indéfini">indéfini</option>
-        </select>
-        
-        <br>
-        <p class="entry">Entrez votre âge :</p>
-        <select class="input-menu">
-            <option value="14 ans">14 ans</option>
-            <option value="15 ans">15 ans</option>
-            <option value="16 ans">16 ans</option>
-            <option value="17 ans">17 ans</option>
-            <option value="18 ans">18 ans</option>
-            <option value="42 ans">42 ans</option>
-        </select>
+    <form id="form-interet" method="POST" action="/submit">
+        <div id="main" class="principal">
+            <center>
+                <h1>
+                    Trouvez votre mate
+                </h1>
+            </center>
+            <p class="entry">Entrez votre prénom :</p>
+            <input type="text" class="input-entry" placeholder="Votre prénom ici">
+            <br>
+            <p class="entry">Entrez votre nom :</p>
+            <input type="text" class="input-entry" placeholder="Votre nom ici">
+            <br>
+            <p class="entry">Entrez votre genre :</p>
+            <select class="input-menu">
+                <option value=""></option>
+                <option value="fille">fille</option>
+                <option value="garçon">garçon</option>
+                <option value="indéfini">indéfini</option>
+            </select>
 
-        <br>
-        <p class="entry">Entrez votre taille :</p>
-        <select class="input-menu">
-            <option value="130 cm">130 cm</option>
-            <option value="135 cm">135 cm</option>
-            <option value="140 cm">140 cm</option>
-            <option value="145 cm">145 cm</option>
-            <option value="150 cm">150 cm</option>
-            <option value="155 cm">155 cm</option>
-            <option value="160 cm">160 cm</option>
-            <option value="165 cm">165 cm</option>
-            <option value="170 cm">170 cm</option>
-            <option value="175 cm">175 cm</option>
-            <option value="180 cm">180 cm</option>
-            <option value="185 cm">185 cm</option>
-            <option value="190 cm">190 cm</option>
-            <option value="195 cm">195 cm</option>
-            <option value="200 cm">200 cm</option>
-        </select>
-        <br>
-        <p class="entry">Entrez votre intéret :</p>
-        <select class="input-menu">
-            <option value="manger">manger</option>
-            <option value="dormir">dormir</option>
-            <option value="jouer">jouer</option>
-        </select>
-        <br>
-        <p class="entry">Entrez votre couleur préférée :</p>
-        <select class="input-menu">
-            <option value="130 cm">130 cm</option>
-            <option value="135 cm">135 cm</option>
-            <option value="140 cm">140 cm</option>
-            <option value="145 cm">145 cm</option>
-            <option value="150 cm">150 cm</option>
-            <option value="155 cm">155 cm</option>
-            <option value="160 cm">160 cm</option>
-            <option value="165 cm">165 cm</option>
-            <option value="170 cm">170 cm</option>
-            <option value="175 cm">175 cm</option>
-            <option value="180 cm">180 cm</option>
-            <option value="185 cm">185 cm</option>
-            <option value="190 cm">190 cm</option>
-            <option value="195 cm">195 cm</option>
-            <option value="200 cm">200 cm</option>
-        </select>
+            <br>
+            <p class="entry">Entrez votre âge :</p>
+            <select class="input-menu">
+                <option value=""></option>
+                <option value="14 ans">14 ans</option>
+                <option value="15 ans">15 ans</option>
+                <option value="16 ans">16 ans</option>
+                <option value="17 ans">17 ans</option>
+                <option value="18 ans">18 ans</option>
+                <option value="42 ans">42 ans</option>
+            </select>
 
-    </div>
+            <br>
+            <p class="entry">Entrez votre taille :</p>
+            <select class="input-menu">
+                <option value=""></option>
+                <option value="130 cm">130 cm</option>
+                <option value="135 cm">135 cm</option>
+                <option value="140 cm">140 cm</option>
+                <option value="145 cm">145 cm</option>
+                <option value="150 cm">150 cm</option>
+                <option value="155 cm">155 cm</option>
+                <option value="160 cm">160 cm</option>
+                <option value="165 cm">165 cm</option>
+                <option value="170 cm">170 cm</option>
+                <option value="175 cm">175 cm</option>
+                <option value="180 cm">180 cm</option>
+                <option value="185 cm">185 cm</option>
+                <option value="190 cm">190 cm</option>
+                <option value="195 cm">195 cm</option>
+                <option value="200 cm">200 cm</option>
+            </select>
+            <br>
+            <p class="entry">Entrez votre intéret :</p>
+            <select class="input-menu">
+                <option value=""></option>
+                <option value="manger">manger</option>
+                <option value="dormir">dormir</option>
+                <option value="jouer">jouer</option>
+            </select>
+            <br>
+            <p class="entry">Entrez votre couleur préférée :</p>
+            <select class="input-menu">
+                <option value=""></option>
+                <option value="Bleu">Bleu</option>
+                <option value="Blanc">Blanc</option>
+                <option value="Rouge">Rouge</option>
+                <option value="Jaune">Jaune</option>
+                <option value="Vert">Vert</option>
+                <option value="Orange">Orange</option>
+                <option value="Marron">Marron</option>
+                <option value="Rose">Rose</option>
+                <option value="Noir">Noir</option>
+                <option value="Violet">Violet</option>
+
+            </select>
+            <br>
+            </select>
+            <button type="submit">Envoyer</button>
+    
+
+        </div>
+    </form>
 
 </body>
 
