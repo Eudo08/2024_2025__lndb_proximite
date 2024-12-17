@@ -27,27 +27,38 @@ def compare_with_different_person (person):
             dico_compatibilite [person][people] = percentage_of_same
     return dico_compatibilite
 
-def list_of_people (person):
-    list_compatibility_with_every_person = []
+def list_of_compatibilite (person):
+    list_compatibility_number = []
     dico_compatibilite = compare_with_different_person (person)
     for values in dico_compatibilite[person].keys ():
-        compatibility = dico_compatibilite[person][values] 
-        list_compatibility_with_every_person. append (compatibility)
-    return list_compatibility_with_every_person
+        compatibility = dico_compatibilite[person][values]
+        list_compatibility_number. append (compatibility)
+    return list_compatibility_number,
+
+def list_of_people (person):
+    list_compatibility_person = []
+    dico_compatibilite = compare_with_different_person (person)
+    for values in dico_compatibilite[person].keys ():
+        list_compatibility_person. append (values)
+    return list_compatibility_person
 
 
-def tri_compatibility_between_users (person):
-    the_closest_to_the_furthest = []
-    list_compatibility_with_every_person = list_of_people (person)
-    while list_compatibility_with_every_person:
-        max_value = list_compatibility_with_every_person[0] 
+def sort_compatibility_between_users (person):
+    sort_compatibility = []
+    distance_with_people = []
+    list_compatibility_number = list_of_compatibilite (person)
+    list_compatibility_person = list_of_people (person)
+    while list_compatibility_number:
+        max_value = list_compatibility_number[0] 
         max_index = 0 
-        for i in range(1, len(list_compatibility_with_every_person)):
-            if list_compatibility_with_every_person[i] > max_value:
-                max_value = list_compatibility_with_every_person[i]
+        for i in range(1, len(list_compatibility_number)):
+            if list_compatibility_number[i] > max_value:
+                max_value = list_compatibility_number[i]
                 max_index = i
-        the_closest_to_the_furthest.append(max_value)
-        del list_compatibility_with_every_person[max_index]
-    return the_closest_to_the_furthest
+        sort_compatibility.append(max_value)
+        del list_compatibility_number[max_index]
+        distance_with_people. append (list_compatibility_person(max_index))
+        del list_compatibility_person[max_index]
+    return sort_compatibility, distance_with_people
 
-print ( tri_compatibility_between_users ("person_1"))
+print ( sort_compatibility_between_users ("person_1"))
