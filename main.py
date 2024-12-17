@@ -44,21 +44,21 @@ def list_of_people (person):
 
 
 def sort_compatibility_between_users (person):
-    sort_compatibility = []
-    distance_with_people = []
-    list_compatibility_number = list_of_compatibilite (person)
-    list_compatibility_person = list_of_people (person)
-    while list_compatibility_number:
-        max_value = list_compatibility_number[0] 
+    sort_number = []
+    sort_people = []
+    list_number = list_of_compatibilite (person)
+    list_person = list_of_people (person)
+    while list_number:
+        max_value = list_number[0] 
         max_index = 0 
-        for i in range(1, len(list_compatibility_number)):
-            if list_compatibility_number[i] > max_value:
-                max_value = list_compatibility_number[i]
+        for i in range(1, len(list_number)):
+            if list_number[i] > max_value:
+                max_value = list_number[i]
                 max_index = i
-        sort_compatibility.append(max_value)
-        del list_compatibility_number[max_index]
-        distance_with_people. append (list_compatibility_person(max_index))
-        del list_compatibility_person[max_index]
-    return sort_compatibility, distance_with_people
+        sort_number.append(max_value)
+        del list_number[max_index]
+        sort_people. append (list_person(max_index))
+        list_person.remove (list_person(max_index))
+    return sort_number, sort_people
 
 print ( sort_compatibility_between_users ("person_1"))
