@@ -1,1 +1,69 @@
 color : rgb(123, 141, 243);
+
+1. HTML : Formulaire avec le menu déroulant
+Ajoute un formulaire qui contient ton <select> avec un bouton pour soumettre les informations.
+
+Exemple :
+html
+Copier le code
+<form id="form-interet" method="POST" action="/submit">
+    <label class="entry" for="interet">Entrez votre intérêt :</label>
+    <select class="input-nom" id="interet" name="interet">
+        <option value="manger">Manger</option>
+        <option value="dormir">Dormir</option>
+        <option value="jouer">Jouer</option>
+    </select>
+    <button type="submit">Envoyer</button>
+</form>
+Le formulaire envoie les informations au serveur via POST (sur /submit).
+2. Python (Flask) : Récupération et stockage des données
+Côté serveur, utilise Flask pour recevoir les données et les stocker dans un dictionnaire.
+
+Exemple Python (serveur Flask) :
+python
+Copier le code
+from flask import Flask, request, render_template
+
+app = Flask(__name__)
+
+# Dictionnaire pour stocker les informations
+user_data = {}
+
+@app.route('/')
+def index():
+    return render_template('index.html')  # Charge la page HTML
+
+@app.route('/submit', methods=['POST'])
+def submit():
+    # Récupère la valeur sélectionnée dans le menu déroulant
+    interet = request.form.get('interet')  
+    
+    # Stocke dans le dictionnaire avec une clé fixe (ou dynamique)
+    user_data['interet'] = interet  
+    
+    print("Données reçues :", user_data)  # Affiche dans la console
+    return f"Intérêt enregistré : {interet}"  # Retourne une confirmation
+
+if __name__ == '__main__':
+    app.run(debug=True)
+3. Explication du code :
+Le formulaire HTML envoie les données au serveur via POST.
+Le serveur Flask récupère la valeur sélectionnée avec request.form.get('interet').
+Cette valeur est ajoutée dans le dictionnaire user_data.
+Le dictionnaire peut être utilisé pour stocker toutes les informations entrées par l'utilisateur.
+4. Tester le programme
+Lance Flask : exécute ton script Python.
+Ouvre la page HTML (http://127.0.0.1:5000).
+Choisis une option dans le menu déroulant et clique sur "Envoyer".
+Les données sont ajoutées dans le dictionnaire user_data et affichées dans la console.
+Exemple de sortie dans la console :
+plaintext
+Copier le code
+Données reçues : {'interet': 'jouer'}
+Dis-moi si tu as besoin d'aide pour une autre étape ! 😊
+
+
+
+
+
+
