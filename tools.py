@@ -8,21 +8,17 @@ site = Flask(__name__)
 
 def save_info():
     
-    name = request.form.get('name')
-    email = request.form.get('email')
-    phone = request.form.get('phone')
+    prenom = request.form.get('prenom')
+    nom = request.form.get('nom')
+    genre = request.form.get('genre')
 
-    # Insérer les données dans un dictionnaire
-    client_data = {
+    personne1 = {
         "name": name,
         "email": email,
         "phone": phone
     }
 
-    # Afficher le dictionnaire pour vérification
-    print(client_data)
-
-    return f"Données reçues : {client_data}"
+    return personne1
 
 if __name__ == '__main__':
     # Lancer le serveur Flask
